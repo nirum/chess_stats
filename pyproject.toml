@@ -1,0 +1,24 @@
+[project]
+name = "chess-stats"
+version = "0.1.0"
+description = "Explore chess.com game history and correlate with external factors"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32",
+    "polars>=1.0",
+    "pyarrow>=16.0",
+    "jupyter>=1.0",
+    "matplotlib>=3.9",
+]
+
+[project.scripts]
+chess-ingest = "chess_stats.ingest:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "ipykernel>=6.0",
+]
