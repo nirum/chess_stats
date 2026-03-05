@@ -2,8 +2,8 @@
 Fetch chess.com game history and store it locally as parquet files.
 
 Usage (CLI):
-    uv run python -m chess_stats.ingest --username nirum
-    uv run python -m chess_stats.ingest --username nirum --data-dir ./data
+    uv run python -m chess_stats.ingest --username nirum11
+    uv run python -m chess_stats.ingest --username nirum11 --data-dir ./data
 
 The script performs a full fetch on first run, then only fetches months that
 haven't been recorded in the fetch log (incremental updates). The current
@@ -234,7 +234,7 @@ def ingest(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Ingest chess.com game history")
-    parser.add_argument("--username", default="nirum", help="chess.com username")
+    parser.add_argument("--username", default="nirum11", help="chess.com username")
     parser.add_argument("--data-dir", default="data", help="Directory for parquet files")
     parser.add_argument(
         "--time-classes",
